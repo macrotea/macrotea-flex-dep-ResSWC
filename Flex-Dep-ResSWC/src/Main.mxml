@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+本文件主要是：
+@author: xxx@gz.iscas.ac.cn
+@version: 1.0
+@date: 2013-3-15 上午9:40:38
+@note:
+-->
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="100%" height="100%">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	
+	<fx:Style source="base.css" />
+	
+	<fx:Script>
+		<![CDATA[
+			
+			[Embed(source="assets/images/new-project.jpg")]
+			[Bindable]
+			public var newProjectClazz:Class;
+			
+			[Embed(source="assets/images/build-setting.jpg")]
+			[Bindable]
+			public var buildSettingClazz:Class;
+		]]>
+	</fx:Script>
+	<s:HGroup x="0" y="0" width="100%" height="90%">
+		<mx:Image width="50%" height="100%" 
+				  autoLoad="true" source="{newProjectClazz}"/>  
+		<mx:Image width="50%" height="100%" 
+				  autoLoad="true" source="{buildSettingClazz}"/>
+		
+		<!-- mx:Button -->
+		<mx:Button/>
+		
+		<mx:Button styleName="tabClose"/>
+	</s:HGroup>
+</s:Application>
